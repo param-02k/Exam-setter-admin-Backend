@@ -1,6 +1,10 @@
 const express = require("express")
 const adminRouter = express.Router();
-const {addFaculty,deleteFaculty,getAllFaculties,addSubject,deleteSubject,getAllSubjects} = require("../controller/adminController")
+const {loginFaculty,addFaculty,deleteFaculty,getAllFaculties,addSubject,deleteSubject,getAllSubjects,assignFacultyToSubject} = require("../controller/adminController")
+
+// adminRouter.post("/registerfaculty", registerFaculty)
+
+adminRouter.post("/loginfaculty", loginFaculty)
 
 adminRouter.post("/addfaculty", addFaculty)
 
@@ -14,4 +18,11 @@ adminRouter.post("/deletesubject", deleteSubject)
 
 adminRouter.get("/getallsubject", getAllSubjects)
 
+adminRouter.post("/assignfacultytosubject", assignFacultyToSubject)
+
 module.exports = adminRouter
+
+
+
+
+// 6846f8e3b932aed729a6ddfa

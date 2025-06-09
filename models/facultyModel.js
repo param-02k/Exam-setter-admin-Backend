@@ -1,8 +1,9 @@
 const mongoose = require("mongoose");
 
 const facultySchema = mongoose.Schema({
-  name: String,
-  employeeCode: String,
+  name: {type : String, required : true},
+  employeeCode: {type : String, required : true, unique : true},
+  password : {type : String, required : true}
 },{
     timestamps: true,
 });
